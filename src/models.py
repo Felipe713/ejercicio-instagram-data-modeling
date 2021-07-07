@@ -22,7 +22,7 @@ class User(Base):
 class Follower(Base):
     __tablename__ = 'follower'
     user_from_id = Column(Integer, ForeignKey('user.id'), primary_key=True)
-    user_to_id = Column(Integer, ForeignKey('user.id') primary_key=True)
+    user_to_id = Column(Integer, ForeignKey('user.id'), primary_key=True)
     user = relationship(User)
 
 
